@@ -1,4 +1,4 @@
-# com  mover um diretorio para um novo volume no openstack
+# como  mover um diretorio para um novo volume no openstack
 tags: openstack,dreamcompute, linux
 
 O passo a passo que se segue compreendo todas as atividades de criação do volume até a copia e configuração do fstab.
