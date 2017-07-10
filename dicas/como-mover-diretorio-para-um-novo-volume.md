@@ -72,19 +72,21 @@ Teste a configuração com:
 sudo mount -a
 ```
 
-Caso precise desmontar usar:
-
-```bash
-umount -l /dev/vdc
-```
 
 3. Copiar os arquivos e configurar o fstab
 
 Com o */mnt/data* montado você pode copiar os arquivos do */home* para a nova pasta
 
 ```bash
-rsync -avH /home/ /mnt/data
+sudo rsync -avH /home/ /mnt/data
 ```
+
+Depois desmonte o /mnt/data:
+
+```bash
+sudo umount -l /dev/vdxn
+```
+
 
 Existe a advertência de não usar o **cp -avr** ou o **cp -ar** , o rsync deve ser melhor.
 
@@ -100,7 +102,7 @@ Agora uma dica importante para apagar os antigos arquivos em /home:
 ```bash
 $ sudo mount --bind / /mnt
 -- cuidado nesse ponto: --
-$ sudo rm -rf /mnt/home
+$ sudo rm -rf /mnt/home/*
 $ sudo umount /mnt
 ```
 ou:
