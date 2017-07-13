@@ -36,5 +36,17 @@ Os principais comandos para usar no hg são:
 O fast-export aparentemente , por default, apenas trabalha com o branch default, se você quiser adicionar outros branches é necessário efetuar um mapeamento e passar a informação para o fast-export.
 
 
+## Como fazer outra branch default no mercurial
+
+talvez seja necessário:
+
+```bash
+$ hg checkout default
+$ hg merge feature-branch
+$ hg commit
+$ hg checkout feature-branch
+$ hg commit --close-branch
+```
+
 [link 1](http://hivelogic.com/articles/converting-from-mercurial-to-git/)
 
