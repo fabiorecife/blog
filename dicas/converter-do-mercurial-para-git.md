@@ -31,6 +31,10 @@ Os principais comandos para usar no hg são:
 * hg commit --close-branch -m "close branch"
 * hg merge [REV]
 
+## IMPORTANTE
+
+O fast-export aparentemente , por default, apenas trabalha com o branch default, se você quiser adicionar outros branches é necessário efetuar um mapeamento e passar a informação para o fast-export.
+
 
 [link 1](http://hivelogic.com/articles/converting-from-mercurial-to-git/)
 
